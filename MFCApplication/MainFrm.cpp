@@ -12,7 +12,16 @@
 #define new DEBUG_NEW
 #endif
 
-// CMainFrame
+class CMyScrollView : public CScrollView
+{
+protected:
+	DECLARE_DYNCREATE(CMyScrollView)
+
+public:
+	virtual void OnDraw(CDC* pDC) override {};  // Override to draw content
+	virtual void OnInitialUpdate() override {}; // Set up scroll sizes
+};
+
 
 IMPLEMENT_DYNAMIC(CMainFrame, CMDIFrameWndEx)
 
